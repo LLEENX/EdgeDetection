@@ -46,20 +46,21 @@ lower_blue = np.array([100, 150, 0], dtype=np.uint8)
 upper_blue = np.array([140, 255, 255], dtype=np.uint8)
 Catatan: Pengguna dapat mengganti warna yang ingin dideteksi dengan mengubah nilai lower dan upper. Misalnya, jika ingin mendeteksi warna kuning, ganti dengan:
 
-python
-Salin kode
+```python
 lower_yellow = np.array([20, 100, 100], dtype=np.uint8)
 upper_yellow = np.array([30, 255, 255], dtype=np.uint8)
-Menyesuaikan Rentang Warna
+```
+
+### Menyesuaikan Rentang Warna
 Hue (H) dalam ruang warna HSV biasanya berkisar antara 0 hingga 179 pada OpenCV. Jika Anda menggunakan aplikasi lain yang menunjukkan nilai dari 0 hingga 360, Anda perlu membagi nilai tersebut menjadi 180. Misalnya, jika aplikasi menunjukkan 160 untuk biru, gunakan 160/2 = 80 dalam OpenCV.
 Jika objek yang Anda coba deteksi memiliki hue yang berbeda (misalnya, lebih ke arah biru kehijauan), Anda mungkin perlu menyesuaikan batas warna lebih jauh. Anda dapat memperluas rentang warna biru, contohnya:
-python
-Salin kode
+```python
 lower_blue = np.array([90, 100, 100], dtype=np.uint8)  # Batas bawah
 upper_blue = np.array([150, 255, 255], dtype=np.uint8)  # Batas atas
 Untuk menemukan rentang HSV dari warna lain, pengguna bisa menggunakan alat seperti colorizer.org atau meneliti tabel nilai HSV online.
+```
 
-5. Mendeteksi Garis dengan Hough Transform
+## 5. Mendeteksi Garis dengan Hough Transform
 Setelah mask diterapkan pada gambar, kita dapat mendeteksi garis dalam objek yang sesuai dengan rentang warna:
 
 python
