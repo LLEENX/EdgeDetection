@@ -2,12 +2,12 @@
 
 Proyek ini adalah contoh sederhana dari deteksi objek dalam gambar berdasarkan warna tertentu, menggunakan OpenCV di lingkungan Google Colab. Pada contoh ini, kita mendeteksi objek yang berwarna biru menggunakan model warna HSV. Namun, kode ini bisa disesuaikan untuk mendeteksi objek dengan warna lain.
 
-####Fitur
+#### Fitur
 1. Deteksi objek berdasarkan rentang warna tertentu di gambar.
 2. Menggunakan transformasi HSV untuk mengidentifikasi warna.
 3. Menampilkan gambar asli dan hasil deteksi objek secara berdampingan menggunakan Matplotlib.
 
-####Persyaratan
+#### Persyaratan
 1. Google Colab (karena proyek ini menggunakan files.upload() untuk mengunggah file dari lokal)
 2. OpenCV (pre-installed di Colab)
 3. Numpy
