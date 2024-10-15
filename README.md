@@ -1,6 +1,6 @@
 # EdgeDetection
 
-Proyek ini adalah contoh sederhana dari deteksi objek dalam gambar berdasarkan warna tertentu, menggunakan OpenCV di lingkungan Google Colab. Pada contoh ini, kita mendeteksi objek yang berwarna biru menggunakan model warna HSV. Namun, kode ini bisa disesuaikan untuk mendeteksi objek dengan warna lain.
+# Proyek ini adalah contoh sederhana dari deteksi objek dalam gambar berdasarkan warna tertentu, menggunakan OpenCV di lingkungan Google Colab. Pada contoh ini, kita mendeteksi objek yang berwarna biru menggunakan model warna HSV. Namun, kode ini bisa disesuaikan untuk mendeteksi objek dengan warna lain.
 
 #### Fitur
 1. Deteksi objek berdasarkan rentang warna tertentu di gambar.
@@ -13,8 +13,9 @@ Proyek ini adalah contoh sederhana dari deteksi objek dalam gambar berdasarkan w
 3. Numpy
 4. Matplotlib
 
-###Cara Menggunakan
-####1. Upload Gambar
+### Cara Menggunakan
+
+#### 1. Upload Gambar
 Untuk mengunggah gambar milik pengguna sendiri, gunakan fungsi files.upload() yang disediakan oleh Google Colab. Kode berikut akan membuka jendela untuk memilih file gambar dari komputer Anda:
 
 ```python
@@ -23,7 +24,7 @@ file = files.upload()
 ```
 Gambar yang dipilih kemudian disimpan dalam variabel file_name, dan akan digunakan untuk proses deteksi berikutnya.
 
-####2. Mengganti Gambar
+#### 2. Mengganti Gambar
 Kode berikut membaca gambar yang diunggah oleh pengguna:
 
 ```python
@@ -32,7 +33,7 @@ image = cv2.imread(file_name)     # Membaca gambar
 ```
 Pengguna perlu mengunggah gambar milik mereka ketika prompt upload muncul.
 
-####3. Mengaburkan dan Mengonversi ke HSV
+#### 3. Mengaburkan dan Mengonversi ke HSV
 Sebelum mendeteksi warna, gambar diubah menjadi format HSV, yang lebih sesuai untuk mendeteksi warna berdasarkan rentang tertentu:
 
 ```python
@@ -40,7 +41,7 @@ blurred_frame = cv2.GaussianBlur(image, (5, 5), 0)  # Mengaburkan gambar
 hsv = cv2.cvtColor(blurred_frame, cv2.COLOR_BGR2HSV) # Konversi ke HSV
 ```
 
-####4. Mengatur Rentang Warna HSV
+#### 4. Mengatur Rentang Warna HSV
 Kode ini menetapkan rentang warna untuk mendeteksi objek. Pada contoh ini, warna biru digunakan. Rentang HSV untuk biru dapat diatur dengan nilai berikut:
 
 ```python
@@ -76,7 +77,7 @@ if lines is not None:
         cv2.line(image, (x1, y1), (x2, y2), (0, 255, 0), 10)
 ```
 
-####6. Menampilkan Hasil
+#### 6. Menampilkan Hasil
 Gambar asli dan hasil deteksi ditampilkan secara berdampingan menggunakan Matplotlib:
 
 ```python
@@ -90,7 +91,7 @@ ax[1].set_title('Deteksi Objek Biru')
 plt.show()
 ```
 
-###3Menyesuaikan Deteksi Warna
+#### Menyesuaikan Deteksi Warna
 Untuk mengganti gambar: Pastikan untuk mengunggah gambar baru melalui dialog files.upload().
 Untuk mengganti warna yang ingin dideteksi: Ubah rentang nilai HSV pada bagian berikut:
 
@@ -100,7 +101,7 @@ upper_color = np.array([H_max, S_max, V_max], dtype=np.uint8)
 ```
 Gantilah H_min, S_min, V_min, H_max, S_max, dan V_max dengan nilai yang sesuai dengan warna yang ingin dideteksi.
 
-###Contoh Deteksi Warna Lain
+### Contoh Deteksi Warna Lain
 ```python
 # Kuning:
 lower_yellow = np.array([20, 100, 100], dtype=np.uint8)
@@ -111,6 +112,6 @@ lower_red = np.array([0, 120, 70], dtype=np.uint8)
 upper_red = np.array([10, 255, 255], dtype=np.uint8)
 ```
 
-##Kesimpulan
+## Kesimpulan
 Proyek ini membantu mendeteksi objek berdasarkan warna dengan mudah menggunakan OpenCV. Gunakan Google Colab untuk menjalankan kode ini dan pastikan mengganti rentang warna sesuai dengan kebutuhan deteksi Anda. Pastikan gambar yang diunggah memiliki objek dengan warna yang sesuai dengan rentang HSV yang Anda tetapkan.
 
