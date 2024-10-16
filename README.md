@@ -1,6 +1,6 @@
 # EdgeDetection
 
-### Proyek ini adalah contoh sederhana dari deteksi objek dalam gambar berdasarkan warna tertentu, menggunakan OpenCV di lingkungan Google Colab. Pada contoh ini, kita mendeteksi objek yang berwarna biru menggunakan model warna HSV. Namun, kode ini bisa disesuaikan untuk mendeteksi objek dengan warna lain.
+Program sederhana deteksi objek dalam gambar berdasarkan warna tertentu, menggunakan OpenCV dalam hal ini menggunakan Google Colab. Program ini bertujuan untuk menentukan garis tepi dari suatu objek pada gambar.
 
 #### Fitur
 1. Deteksi objek berdasarkan rentang warna tertentu di gambar.
