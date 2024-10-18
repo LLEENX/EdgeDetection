@@ -113,5 +113,5 @@ upper_red = np.array([10, 255, 255], dtype=np.uint8)
 ```
 
 ## Kesimpulan
-Proyek ini membantu mendeteksi objek berdasarkan warna dengan mudah menggunakan OpenCV. Gunakan Google Colab untuk menjalankan kode ini dan pastikan mengganti rentang warna sesuai dengan kebutuhan deteksi Anda. Pastikan gambar yang diunggah memiliki objek dengan warna yang sesuai dengan rentang HSV yang Anda tetapkan.
+Program membantu mendeteksi objek berdasarkan warna dengan mudah menggunakan OpenCV. Kalian bisa menggunakan Google Colab untuk menjalankan kode ini dan pastikan mengganti rentang warna sesuai dengan kebutuhan deteksi Anda. Pastikan gambar yang diunggah memiliki objek dengan warna yang sesuai dengan rentang HSV yang Anda tetapkan.
 
